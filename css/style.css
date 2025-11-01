@@ -21,7 +21,6 @@ ul {
 
 img {
   display: block;
-  box-sizing: border-box;
 }
 
 address {
@@ -57,7 +56,7 @@ body {
   overflow: hidden;
 }
 
-/* header */
+/* #region header */
 .header {
   border-bottom: 1px solid #e7e9fc;
 }
@@ -68,15 +67,10 @@ body {
   align-items: center;
 }
 
-/* menu */
+/* #region menu */
 .header-menu {
   display: flex;
   align-items: center;
-}
-
-.menu-list {
-  display: flex;
-  gap: 40px;
 }
 
 .logo {
@@ -94,20 +88,40 @@ body {
   color: #2e2f42;
 }
 
+.menu-list {
+  display: flex;
+  gap: 40px;
+}
+
 .menu-link {
+  position: relative;
   font-weight: 500;
   font-size: 16px;
   color: #2e2f42;
   padding: 24px 0;
   display: block;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.active-link,
 .menu-link:hover,
 .menu-link:focus {
   color: #404bbf;
 }
 
-/* contacts */
+.active-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #404bbf;
+}
+/* #endregion menu */
+
+/* #region contacts */
 .contacts-list {
   display: flex;
   gap: 40px;
@@ -115,14 +129,18 @@ body {
 
 .contact-link {
   color: #434455;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-link:hover,
 .contact-link:focus {
   color: #404bbf;
 }
+/* #endregion contacts */
 
-/* main */
+/* #endregion header */
+
+/* #region main */
 .section {
   padding: 120px 0;
 }
@@ -138,9 +156,13 @@ body {
   margin-bottom: 72px;
 }
 
-/* hero */
+/* #region hero */
 .hero {
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7)),
+    url(../images/hero-bg.jpg);
   background-color: #2e2f42;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
   padding: 188px 0;
 }
 
@@ -171,14 +193,16 @@ body {
   color: #ffffff;
   border: none;
   margin: 0 auto;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-btn:hover,
 .hero-btn:focus {
   background-color: #404bbf;
 }
+/* #endregion hero */
 
-/* advantages */
+/* #region advantages */
 .advantages-list {
   display: flex;
   gap: 24px;
@@ -186,6 +210,12 @@ body {
 
 .advantages-item {
   flex-basis: calc((100% - 72px) / 4);
+}
+
+.advantages-card {
+  background-color: #f4f4fd;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
 }
 
 .advantages-title {
@@ -196,6 +226,7 @@ body {
   color: #2e2f42;
   margin-bottom: 8px;
 }
+/* #endregion advantages */
 
 /* our team */
 .team-section {
@@ -261,6 +292,8 @@ body {
   color: #2e2f42;
   margin-bottom: 8px;
 }
+
+/* #endregion main */
 
 /* footer */
 .footer {

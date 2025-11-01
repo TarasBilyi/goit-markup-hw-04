@@ -17,24 +17,35 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.css"
+      integrity="sha512-gnAN+RgTMylunXI7AMg+PtcUGpKZFkZJoFIkAWvdPFRrFJz3p2tx4+9xbjILRfN7CzoViMgS8vSf06fSQzWZjA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
+    <!-- #region header -->
     <header class="header">
       <div class="container header-elements">
-        <!-- menu -->
+        <!-- #region menu -->
         <nav class="header-menu">
           <a class="logo" href="./index.html">
             Web<span class="logo-text">Studio</span>
           </a>
           <ul class="menu-list">
-            <li><a class="menu-link" href="./index.html">Studio</a></li>
+            <li>
+              <a class="menu-link active-link" href="./index.html">Studio</a>
+            </li>
             <li><a class="menu-link" href="">Portfolio</a></li>
             <li><a class="menu-link" href="">Contacts</a></li>
           </ul>
         </nav>
+        <!-- #endregion menu -->
 
-        <!-- contacts -->
+        <!-- #region contacts -->
         <address class="contacts">
           <ul class="contacts-list">
             <li>
@@ -49,24 +60,37 @@
             </li>
           </ul>
         </address>
+        <!-- #endregion contacts -->
       </div>
     </header>
+    <!-- #endregion header -->
 
+    <!-- #region main -->
     <main>
-      <!-- hero -->
+      <!-- #region hero -->
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
           <button class="hero-btn" type="button">Order service</button>
         </div>
       </section>
+      <!-- #endregion hero -->
 
-      <!-- advantages -->
+      <!-- #region advantages -->
       <section class="section">
         <div class="container">
           <h2 class="visually-hidden">Advantages</h2>
           <ul class="advantages-list">
             <li class="advantages-item">
+              <div class="advantages-card">
+                <svg>
+                  <use
+                    href="./images/icons.svg#icon-antenna"
+                    width="64"
+                    height="64"
+                  ></use>
+                </svg>
+              </div>
               <h3 class="advantages-title">Strategy</h3>
               <p class="advantages-desc">
                 Our goal is to identify the business problem to walk away with
@@ -97,8 +121,9 @@
           </ul>
         </div>
       </section>
+      <!-- #endregion advantages -->
 
-      <!-- our team -->
+      <!-- #region our team -->
       <section class="section team-section">
         <div class="container">
           <h2 class="section-title">Our team</h2>
@@ -150,8 +175,9 @@
           </ul>
         </div>
       </section>
+      <!-- #endregion our team -->
 
-      <!-- portfolio -->
+      <!-- #region portfolio -->
       <section class="section">
         <div class="container">
           <h2 class="section-title">Our portfolio</h2>
@@ -226,8 +252,11 @@
           </ul>
         </div>
       </section>
+      <!-- #endregion portfolio -->
     </main>
+    <!-- #endregion main -->
 
+    <!-- #region footer -->
     <footer class="footer">
       <div class="container">
         <a class="footer-logo" href="./index.html">
@@ -239,5 +268,6 @@
         </p>
       </div>
     </footer>
+    <!-- #endregion footer -->
   </body>
 </html>
